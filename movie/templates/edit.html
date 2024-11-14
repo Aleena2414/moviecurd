@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="conatiner mt-3 text-light">
+    <div class="mx-auto w-50">
+    <h2 class="text-danger text-center">Edit Movie</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit">
+    </form>
+{% endblock %}
